@@ -12,7 +12,11 @@ int	main()
 	//vect.push_back(20);
 	//vect.push_back(30);
 	std::list<int> lst;
-	easyfind(lst, 10);
+	lst.push_back(10);
+	lst.push_back(20);
+	lst.push_back(30);
+	std::cout << *easyfind(lst, 10) << "\n";
+	std::cout << *easyfind(lst, 11) << "\n";
 	return 0;
 }
 

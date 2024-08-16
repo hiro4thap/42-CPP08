@@ -4,9 +4,9 @@
 # include <algorithm>
 
 template <typename T>
-void easyfind(const T &src, const int target)
+typename T::iterator easyfind(T &src, int const target)
 {
-	std::find(src.begin(), src.end(), target);
+	return std::find(src.begin(), src.end(), target);
 }
 
 #endif
