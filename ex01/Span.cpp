@@ -74,5 +74,5 @@ char const *Span::IsFullException::what() const throw()
 
 char const *Span::NoSpanFoundException::what() const throw()
 {
-	return "No span is found";
+	return "No span can be found";
 }
