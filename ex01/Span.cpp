@@ -8,8 +8,11 @@ Span::~Span()
 {
 }
 
-Span::Span(Span const &rhs)
+Span::Span(Span const &rhs):
+	_size(rhs.getSize())
 {
+	//for (unsigned int i = 0; i < _size; i++)
+	//	_numbers.push_back(rhs.getNumbers(i));
 	*this = rhs;
 }
 
@@ -19,7 +22,7 @@ Span &Span::operator=(Span const &rhs)
 	{
 		_size = rhs.getSize();
 		for (unsigned int i = 0; i < _size; i++)
-			_numbers[i] = rhs.getNumbers(i);
+			_numbers.push_back(rhs.getNumbers(i));
 	}
 	return *this;
 }

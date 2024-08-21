@@ -58,6 +58,23 @@ int main()
 	std::cout << sp.longestSpan() << std::endl;
 	Log::nl();
 
+	Span sp2(sp);
+	Log::nl("Try to find span with 5 numbers stored in copy-constructed Span", CYAN);
+	Log::out("shortestSpan : ", YELLOW);
+	std::cout << sp.shortestSpan() << std::endl;
+	Log::out("longestSpan  : ", YELLOW);
+	std::cout << sp.longestSpan() << std::endl;
+	Log::nl();
+
+	Span sp3;
+	sp3 = sp;
+	Log::nl("Try to find span with 5 numbers stored in copy-assigned Span", CYAN);
+	Log::out("shortestSpan : ", YELLOW);
+	std::cout << sp.shortestSpan() << std::endl;
+	Log::out("longestSpan  : ", YELLOW);
+	std::cout << sp.longestSpan() << std::endl;
+	Log::nl();
+
 	Log::nl("Try to add number to full Span", CYAN);
 	try
 	{
